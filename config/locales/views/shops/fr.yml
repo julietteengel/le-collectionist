@@ -1,0 +1,6 @@
+fr:
+  views:
+    shops:
+      show:
+        header:
+          title: "Horaires :"

@@ -1,0 +1,6 @@
+en:
+  views:
+    shops:
+      show:
+        header:
+          title: "Opening times:"
