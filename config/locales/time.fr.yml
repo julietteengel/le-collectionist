@@ -1,0 +1,4 @@
+fr:
+  time:
+    formats:
+      hour_only: "%Hh"

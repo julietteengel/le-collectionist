@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    models:
+      shop: shop
+      opening_hour: opening hour
+    attributes:
+      shop:
+        closed: Closed
+      opening_hour:
+        days:
+          sunday: Sunday
+          monday: Monday
+          tuesday: Tuesday
+          wednesday: Wednesday
+          thursday: Thursday
+          friday: Friday
+          saturday: Saturday
+    errors:
+      models:
+        shop:
+          attributes:
+            base:
+              opens_before_closes: Business hours are invalid

@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    models:
+      shop: magasin
+      opening_hour: horaire d'ouverture
+    attributes:
+      shop:
+        closed: Fermé
+      opening_hour:
+        days:
+          sunday: Dimanche
+          monday: Lundi
+          tuesday: Mardi
+          wednesday: Mercredi
+          thursday: Jeudi
+          friday: Vendredi
+          saturday: Samedi
+    errors:
+      models:
+        shop:
+          attributes:
+            base:
+              opens_before_closes: Les horaires d'ouverture sont invalides
