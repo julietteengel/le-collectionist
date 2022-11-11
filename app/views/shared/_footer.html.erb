@@ -1,0 +1,10 @@
+<div class="footer">
+  <%= I18n.t('language_change') %>
+  <ul class="nobull">
+    <% I18n.available_locales.each do |locale| %>
+      <li>
+        <%= link_to t(".lang.#{locale}"), url_for(locale: locale), { class: "dropdown-item #{'disabled' if I18n.locale == locale}" } %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -16,6 +16,11 @@ module LeCollectionist
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Configuration locales I18n
+    config.i18n.default_locale = :fr
+    config.i18n.locale = :fr
+    config.i18n.available_locales = [:en, :fr]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

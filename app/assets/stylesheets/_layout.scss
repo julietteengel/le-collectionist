@@ -4,3 +4,16 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+a.disabled {
+  pointer-events: none;
+  color: #ccc;
+}
+
+.footer {
+  padding-top: 60px;
+}
+
+.nobull {
+  list-style-type: none;
+}

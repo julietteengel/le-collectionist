@@ -4,3 +4,6 @@ fr:
       show:
         header:
           title: "Horaires :"
+      index:
+        header:
+          title: "Liste des magasins :"

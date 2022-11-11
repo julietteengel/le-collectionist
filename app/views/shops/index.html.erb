@@ -1,7 +1,7 @@
-<h2>Le Collectionist - Assignment</h2>
-
-<h4>List of shops</h4>
-
+<div class="header">
+  <h2>Le Collectionist - Assignment</h2>
+  <h4><%= t("views.shops.index.header.title") %></h4>
+</div>
 <% @shops.each do |shop| %>
   <%= link_to shop.name, shop_path(shop) %>
 <% end %>

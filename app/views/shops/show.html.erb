@@ -1,17 +1,15 @@
-<div class="container">
-  <div class="header">
-    <h2><%= @shop.name %></h2>
-    <h3><%= t("views.shops.show.header.title") %></h3>
-  </div>
-  <table>
-    <thead>
-    <tbody>
-      <% Array(0..6).rotate(Date.today.wday).each_with_index do |n, index| %>
-        <tr>
-          <td class="<%= 'today' if index == 0 %>" style="min-width: 100px;"><%= enum_i18n(OpeningHour, :day, OpeningHour.days.key(n)) %></td>
-          <td><%= @shop.opening_hour_string(n) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div class="header">
+  <h2><%= @shop.name %></h2>
+  <h3><%= t("views.shops.show.header.title") %></h3>
 </div>
+<table>
+  <thead>
+  <tbody>
+    <% Array(0..6).rotate(Date.today.wday).each_with_index do |n, index| %>
+      <tr>
+        <td class="<%= 'today' if index == 0 %>" style="min-width: 100px;"><%= enum_i18n(OpeningHour, :day, OpeningHour.days.key(n)) %></td>
+        <td><%= @shop.opening_hour_string(n) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -4,3 +4,6 @@ en:
       show:
         header:
           title: "Opening times:"
+      index:
+        header:
+          title: "List of shops:"
