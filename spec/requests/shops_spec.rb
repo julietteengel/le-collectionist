@@ -6,8 +6,10 @@ RSpec.describe "Shops", type: :request do
 
   describe "GET /show" do
     it "renders a successul response" do
-      get "/shops/#{shop_with_hours.id}"
-      expect(response).to be_successful
+      ["fr", "en"].each do |locale|
+        get "/#{locale}/shops/#{shop_with_hours.id}"
+        expect(response).to be_successful
+      end
     end
   end
 
