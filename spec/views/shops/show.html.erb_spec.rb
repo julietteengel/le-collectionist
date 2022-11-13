@@ -3,9 +3,11 @@ require "rails_helper"
 RSpec.describe "shops/show", type: :view do
 
   let(:shop_with_hours) { create(:shop_with_hours) }
+  let(:organized_array) { Array(0..6).rotate(Time.zone.today.wday) }
 
   before do
     assign(:shop, shop_with_hours)
+    assign(:organized_array, organized_array)
   end
 
   it "renders a list of opening hours for each day of the week" do

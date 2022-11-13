@@ -5,7 +5,7 @@
 <table>
   <thead>
   <tbody>
-    <% Array(0..6).rotate(Date.today.wday).each_with_index do |n, index| %>
+    <% @organized_array.each_with_index do |n, index| %>
       <tr>
         <td class="<%= 'today' if index == 0 %>" style="min-width: 100px;"><%= enum_i18n(OpeningHour, :day, OpeningHour.days.key(n)) %></td>
         <td><%= @shop.opening_hour_string(n) %></td>
