@@ -4,15 +4,8 @@ Rake::Task["db:reset"]
 shop = Shop.create(name: "L'Épicerie Du Coin")
 
 # Hours
-[:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday].each do |day|
-  if day == :sunday
-    OpeningHour.create(
-      day: day,
-      shop_id: shop.id,
-      opens_at: nil,
-      closes_at: nil
-    )
-  elsif day == :saturday
+[:monday, :tuesday, :wednesday, :thursday, :friday, :saturday].each do |day|
+  if day == :saturday
     OpeningHour.create(
       day: day,
       shop_id: shop.id,
