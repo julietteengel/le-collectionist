@@ -15,6 +15,10 @@ FactoryBot.define do
       closes_before_opens
     end
 
+    factory :opening_hour_with_fixed_hours do
+      fixed_hours
+    end
+
     factory :opening_hour_overlapping_opening_hours do
       overlapping
     end
@@ -39,7 +43,17 @@ FactoryBot.define do
       closes_at { rand(t1..t2) }
     end
 
+    trait :fixed_hours do
+      # fixed hours so we can compare and create a record with overlapping hours
+      # attributes
+      t1 = Time.zone.parse('10:30')
+      t2 = Time.zone.parse('15:00')
+      opens_at { t1 }
+      closes_at { t2 }
+    end
+
     trait :overlapping do
+      # comparation made with fixed_hours hours factory
       t1 = Faker::Time.between(from: Time.zone.parse('00:00'), to: Time.zone.parse('15:00'))
       max = Time.zone.parse('10:30') > t1 ? Time.zone.parse('10:30') : t1
       t2 = Faker::Time.between(from: max, to: Time.zone.parse('23:59'))

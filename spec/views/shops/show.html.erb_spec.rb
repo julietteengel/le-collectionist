@@ -10,7 +10,7 @@ RSpec.describe 'shops/show', type: :view do
     assign(:shop, shop_with_hours)
     assign(:organized_array, organized_array)
   end
-
+  
   it 'renders a list of opening hours for each day of the week' do
     render
     expect(rendered).to have_text shop_with_hours.name.to_s
