@@ -1,15 +1,2 @@
-<div class="header">
-  <h2><%= @shop.name %></h2>
-  <h3><%= t("views.shops.show.header.title") %></h3>
-</div>
-<table>
-  <thead>
-  <tbody>
-    <% @organized_array.each_with_index do |n, index| %>
-      <tr>
-        <td class="<%= 'today' if index == 0 %>" style="min-width: 100px;"><%= enum_i18n(OpeningHour, :day, OpeningHour.days.key(n)) %></td>
-        <td><%= @shop.opening_hour_string(n) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render "header" %>
+<%= render "shops/opening_hours/list" %>
