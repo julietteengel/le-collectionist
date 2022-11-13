@@ -20,7 +20,7 @@ class Shop < ApplicationRecord
     string = ''
     hours_on_date = opening_hours.group_by(&:day).select { |k, _v| wday == OpeningHour.days[k] }.values.flatten
     hours_on_date.each do |hour|
-      string << "#{I18n.l(hour.opens_at,
+      string += "#{I18n.l(hour.opens_at,
                           format: :hour_only)} - #{I18n.l(hour.closes_at,
                                                           format: :hour_only)}#{hours_on_date.last == hour ? '' : ', '}"
     end
