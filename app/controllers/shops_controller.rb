@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ShopsController < ApplicationController
   before_action :set_shop, only: :show
 
@@ -6,7 +8,7 @@ class ShopsController < ApplicationController
   end
 
   def show
-    @organized_array = Array(0..6).rotate(Date.today.wday)
+    @organized_array = Array(0..6).rotate(Time.zone.today.wday)
   end
 
   private

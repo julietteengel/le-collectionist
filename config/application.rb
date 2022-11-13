@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -19,7 +21,7 @@ module LeCollectionist
     # Configuration locales I18n
     config.i18n.default_locale = :fr
     config.i18n.locale = :fr
-    config.i18n.available_locales = [:en, :fr]
+    config.i18n.available_locales = %i[en fr]
 
     # Configuration for the application, engines, and railties goes here.
     #

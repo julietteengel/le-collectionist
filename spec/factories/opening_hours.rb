@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :opening_hour do
     # relations
@@ -19,20 +21,20 @@ FactoryBot.define do
 
     trait :opens_before_closes do
       # attributes
-      t1 = Time.parse("10:30")
-      t2 = Time.parse("15:00")
-      t3 = Time.parse("17:30")
-      t4 = Time.parse("20:00")
+      t1 = Time.zone.parse('10:30')
+      t2 = Time.zone.parse('15:00')
+      t3 = Time.zone.parse('17:30')
+      t4 = Time.zone.parse('20:00')
       opens_at { rand(t1..t2) }
       closes_at { rand(t3..t4) }
     end
 
     trait :closes_before_opens do
       # attributes
-      t1 = Time.parse("10:30")
-      t2 = Time.parse("15:00")
-      t3 = Time.parse("17:30")
-      t4 = Time.parse("20:00")
+      t1 = Time.zone.parse('10:30')
+      t2 = Time.zone.parse('15:00')
+      t3 = Time.zone.parse('17:30')
+      t4 = Time.zone.parse('20:00')
       opens_at { rand(t3..t4) }
       closes_at { rand(t1..t2) }
     end
