@@ -16,6 +16,6 @@ class OpeningHour < ApplicationRecord
   private
 
   def opens_before_closes
-    errors.add(:base, I18n.t(:opens_before_closes, scope: 'activerecord.errors.models.opening_hour')) if opens_at && closes_at && opens_at >= closes_at
+    errors.add(:base, I18n.t(:opens_before_closes, scope: 'activerecord.errors.models.shop')) if opens_at && closes_at && opens_at >= closes_at
   end
 end

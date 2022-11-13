@@ -18,6 +18,5 @@ fr:
     errors:
       models:
         shop:
-          attributes:
-            base:
-              opens_before_closes: Les horaires d'ouverture sont invalides
+          opens_before_closes: Les horaires d'ouverture sont invalides
+          has_overlapping_opening_hours: Un horaire existe déjà sur cette plage horaire

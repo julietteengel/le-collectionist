@@ -3,7 +3,7 @@ FactoryBot.define do
     name { "#{Faker::Company.buzzword}_#{Time.current.to_i.to_s}" }
 
     factory :shop_with_hours do
-      opening_hours { [association(:opening_hour)] }
+      opening_hours { [association(:default_opening_hour)] }
     end
   end
 end

@@ -18,6 +18,5 @@ en:
     errors:
       models:
         shop:
-          attributes:
-            base:
-              opens_before_closes: Business hours are invalid
+          opens_before_closes: Business hours are invalid
+          has_overlapping_opening_hours: Business hours cannot overlap
